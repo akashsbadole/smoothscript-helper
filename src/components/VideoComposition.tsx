@@ -1,10 +1,12 @@
-import { AbsoluteFill, Sequence } from "@remotion/player";
+import { useVideoConfig, AbsoluteFill, Sequence } from "remotion";
 import { CodeSnippet } from "./CodeSnippet";
 import { LogoReveal } from "./LogoReveal";
 import { TextTransition } from "./TextTransition";
 import { ParticleBackground } from "./ParticleBackground";
 
 export const VideoComposition = () => {
+  const { fps, durationInFrames } = useVideoConfig();
+
   return (
     <AbsoluteFill className="bg-tech-dark">
       <ParticleBackground />
